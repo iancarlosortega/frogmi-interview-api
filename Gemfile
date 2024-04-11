@@ -49,3 +49,5 @@ end
 gem "httparty", "~> 0.21.0"
 
 gem "will_paginate", "~> 4.0"
+
+gem "rack-cors", "~> 2.0"
