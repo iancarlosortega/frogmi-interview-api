@@ -33,6 +33,13 @@ module Api
       }
     end
 
+    def show
+      feature = Feature.find(params[:id])
+      render json: feature_as_json(feature)
+      rescue ActiveRecord::RecordNotFound
+      render json: { error: 'Feature not found' }, status: :not_found
+    end
+
     private
 
     def validate_per_page_param
