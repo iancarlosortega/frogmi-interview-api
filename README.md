@@ -1,24 +1,55 @@
-# README
+# Frogmi Interview Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Prerequisites
 
-Things you may want to cover:
+Before you begin, make sure you have the following installed on your system:
 
-* Ruby version
+- Ruby
+- Rails
+- Bundler gem
 
-* System dependencies
+## Setup Instructions
 
-* Configuration
+1. **Clone the Repository:**
 
-* Database creation
+   ```bash
+   git clone https://github.com/iancarlosortega/frogmi-interview-api.git
+    ```
+ 
+2. **Navigate to the Directory:**
 
-* Database initialization
+   ```bash
+   cd frogmi-interview-api
+   ```
 
-* How to run the test suite
+3. **Install Dependencies:**
 
-* Services (job queues, cache servers, search engines, etc.)
+   ```bash
+    bundle install
+    ```
 
-* Deployment instructions
+4. **Create the Database:**
 
-* ...
+    ```bash
+    rails db:create
+    ```
+
+5. **Run Migrations:**
+
+    ```bash
+    rails db:migrate
+    ```
+
+6. **Seed the Database:**
+
+    ```bash
+    rails seed:usgs_earthquakes
+    ```
+
+7. **Start the Server:**
+
+    ```bash
+    rails server
+    ```
+
+8. **Open your browser and navigate to `http://localhost:3000` to view the application.**
