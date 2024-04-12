@@ -8,7 +8,7 @@ module Api
       # Validations
       return render(validate_per_page_param) if validate_per_page_param
 
-      comments = Comment.where(feature_id: params[:feature_id])
+      comments = Comment.where(feature_id: params[:feature_id]).order(created_at: :desc)
 
       total_count = comments.count
       comments = comments.paginate(page: params[:page], per_page: params[:per_page])
